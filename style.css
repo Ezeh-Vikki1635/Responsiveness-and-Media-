@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%) ;
+}
+.main-container{
+    display: flex;
+    place-items: center;
+    margin: auto;
+    align-items: center;
+    font-size: 16px;
+    font-family: Poppins;
+    justify-content: center;
+    
+}
+.main-para{
+    color: aliceblue;
+    width: 50%;
+    padding: 100px;
+    margin: 15px;
+}
+.main-para p{
+    font-size: 10px;
+    padding-top: 10px;
+}
+.main-para h1{
+    padding-bottom: 10px;
+    line-height: 1;
+}
+.container{
+    padding-top: 50px;
+    padding-bottom: 30px;
+    
+}
+.head{
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    font-size: 10px;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.form{
+   background-color: white;
+   width: 100%;
+   padding: 30px;
+   border-radius: 10px;
+}
+
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 10px;
+    border: 1px solid hsl(246, 25%, 77%);
+    border-radius: 5px;
+    
+    
+}
+input:focus {
+    outline: none !important;
+    border: 2px solid hsl(249, 10%, 26%);
+
+}
+
+input[type=submit] {
+    background-color: hsl(154, 59%, 51%);
+    color: white;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+.para{
+    color: hsl(246, 25%, 77%);
+    font-size: 8px;
+}
+::placeholder{
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    font-weight: 700;
+    
+}
+
+@media screen and (min-width: 1440px) {
+    .main-container .main-para {
+        width: 100%;
+        
+    }
+    
+}
+@media screen and (max-width: 375px) {
+    .main-container{
+        flex-direction: column;
+        flex-wrap: wrap;
+        background-image: url(bg-intro-mobile.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 30px;
+        width: 100%;
+    }
+    .main-para{
+        padding: 0;
+        text-align: center;
+        width: 70%;
+        
+        
+    }
+    
+}
+

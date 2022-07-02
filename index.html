@@ -23,21 +23,24 @@
                 <form action="">
                     <div>
                         <label for="First Name"></label>
-                        <input type="text" placeholder="First Name" maxlength="12" minlength="2"  required>
+                        <input type="text" id="fName" placeholder="First Name" maxlength="12" minlength="2"  required>
+                        <i>First Name cannot be empty</i>
                     </div>
                     <div>
                         <label for="Last Name"></label>
-                        <input type="text" placeholder="Last Name" maxlength="12" minlength="2" required>
+                        <input type="text" id="Lname" placeholder="Last Name" maxlength="12" minlength="2" required>
+                        <i>Last Name cannot be empty</i>
                     </div>
                     <div>
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Email Address" required>
+                        <i>Looks like this is not an email</i>
                     </div>
                     <div>
                         <label for="password"></label>
                         <input type="password" name="password" id="password" placeholder="Password"
-                         title=""
                         required>
+                        <i>Password cannot be empty</i>
                     </div>
                     <div>
                         <input type="submit" value="CLAIM YOUR FREE TRIAL">
@@ -51,5 +54,8 @@
             </div>
         </div>
     </main>
+    <script>
+        
+    </script>
 </body>
 </html>

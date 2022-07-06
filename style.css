@@ -72,7 +72,7 @@ input:focus {
     border: 2px solid hsl(249, 10%, 26%);
 
 }
-input:required:invalid{
+input.error{
     outline: none;
     border: none;
     border: 1px solid hsl(0, 100%, 74%);
@@ -81,17 +81,18 @@ input:required:invalid{
     background-position: right;
     background-origin: content-box;
 }
-input:invalid+i{
+
+i{
+    display: none;
+}
+input + i{
     display: inline;
     color: hsl(0, 100%, 74%);
     float: right;
     font-size: 10px;
 }
-i{
-    display: none;
-}
 
-input[type=submit] {
+input[type="submit"] {
     background-color: hsl(154, 59%, 51%);
     color: white;
     cursor: pointer;

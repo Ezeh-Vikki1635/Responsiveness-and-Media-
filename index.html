@@ -20,30 +20,30 @@
                 <p>Try it free 7days <span style="color: hsl(246, 25%, 77%); font-weight: 600;">then $20/mo. thereafter</span></p>
             </div>
             <div class="form">
-                <form action="">
+                <form name="userForm">
                     <div>
                         <label for="First Name"></label>
-                        <input type="text" id="fName" placeholder="First Name" maxlength="12" minlength="2"  required>
-                        <i>First Name cannot be empty</i>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name" maxlength="12" minlength="2"  required>
+                        <i id="firstNameErrors"></i>
                     </div>
                     <div>
                         <label for="Last Name"></label>
-                        <input type="text" id="Lname" placeholder="Last Name" maxlength="12" minlength="2" required>
-                        <i>Last Name cannot be empty</i>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name" maxlength="12" minlength="2" required>
+                        <i id="lastNameErrors"></i>
                     </div>
                     <div>
                         <label for="email"></label>
                         <input type="email" name="email" id="email" placeholder="Email Address" required>
-                        <i>Looks like this is not an email</i>
+                        <i id="emailEmptyErrors"></i>
                     </div>
                     <div>
                         <label for="password"></label>
                         <input type="password" name="password" id="password" placeholder="Password"
                         required>
-                        <i>Password cannot be empty</i>
+                        <i id="passwordErrors"></i>
                     </div>
                     <div>
-                        <input type="submit" value="CLAIM YOUR FREE TRIAL">
+                        <input onclick="validation()" type="submit" value="CLAIM YOUR FREE TRIAL">
                         
                     </div>
                     <div>
@@ -55,7 +55,51 @@
         </div>
     </main>
     <script>
-        
+        {
+        function validation() {
+          const firstName = document.getElementById("firstName").value;
+          const lastName = document.getElementById("lastName").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+
+          console.log(firstName);
+          if (firstName === "") {
+            document.getElementById("firstNameErrors").innerHTML =
+              "First Name cannot be empty";
+            document.getElementById("firstName").classList.add("error");
+          } else {
+            document.getElementById("firstNameErrors").innerHTML = "";
+            document.getElementById("firstName").classList.remove("error");
+          }
+
+          if (lastName === "") {
+            document.getElementById("lastNameErrors").innerHTML =
+              "Last Name cannot be empty";
+            document.getElementById("lastName").classList.add("error");
+          } else {
+            document.getElementById("lastNameErrors").innerHTML = "";
+            document.getElementById("lastName").classList.remove("error");
+          }
+
+          if (email === "") {
+            document.getElementById("emailEmptyErrors").innerHTML =
+              "Looks like this is not an email";
+            document.getElementById("email").classList.add("error");
+          } else {
+            document.getElementById("emailEmptyErrors").innerHTML = "";
+            document.getElementById("email").classList.remove("error");
+          }
+
+          if (password === "") {
+            document.getElementById("passwordErrors").innerHTML =
+              "Password cannot be empty";
+            document.getElementById("password").classList.add("error");
+          } else {
+            document.getElementById("passwordErrors").innerHTML = "";
+            document.getElementById("password").classList.remove("error");
+          }
+        }
+      }
     </script>
 </body>
 </html>
